@@ -1,27 +1,21 @@
 import React from 'react'
-import { createStackNavigator, createAppContainer } from 'react-navigation'
+import { Text, Image } from 'react-native'
+import { createStackNavigator, createAppContainer, createBottomTabNavigator } from 'react-navigation'
 import createAnimatedSwitchNavigator from 'react-navigation-animated-switch'
 import { Transition } from 'react-native-reanimated'
 import WelcomeScreen from 'src/screens/Welcome'
 import SplashScreen from 'src/screens/SplashScreen'
 import HomeScreen from 'src/screens/Home'
+import TaskScreen from 'src/screens/Task'
+import Colors from 'src/utils/Colors'
+import CustomBottomNavigation from 'src/utils/createBottomTab'
 
-const AppStack = createStackNavigator({ Home: HomeScreen })
-const AuthStack = createStackNavigator({
-  Welcome: {
-    screen: WelcomeScreen
-  }
-}, {
-  defaultNavigationOptions: {
-    headerTransparent: true,
-  }
-})
+const AppStack = CustomBottomNavigation
 
-const SwitchNAvigator = createAnimatedSwitchNavigator(
+const SwitchNavigator = createAnimatedSwitchNavigator(
   {
     SplashScreen: SplashScreen,
     App: AppStack,
-    Auth: AuthStack,
   },
   {
     initialRouteName: 'SplashScreen',
@@ -32,10 +26,10 @@ const SwitchNAvigator = createAnimatedSwitchNavigator(
           durationMs={100}
           interpolation="easeIn"
         />
-        <Transition.In type="fade" durationMs={200} />
+        <Transition.In type="slide-right" durationMs={200} />
       </Transition.Together>
     )
   }
 )
 
-export default createAppContainer(SwitchNAvigator)
+export default createAppContainer(SwitchNavigator)

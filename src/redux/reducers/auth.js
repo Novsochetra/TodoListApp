@@ -1,6 +1,5 @@
 
 import { AUTH_TYPES } from 'src/redux/types'
-// import { AUTH_TYPES } from './../types'
 
 const initialState = {
   data: null,

@@ -1,0 +1,16 @@
+export default Colors = {
+  PURPLE: '#554E8F',
+  WHITE: '#ffffff',
+  LIGHT_BLUE: '#5F87E7',
+  LIGHT_GRAY: '#BEBEBE',
+  LIGHT_GRAY2: '#8B87B3',
+  LIGHT_GRAY3: '#686868',
+  YELLOW1: '#FFD506',
+  WHITE: '#ffffff',
+  TEXT_LIGHT_GRAY: '#F3F3F3',
+
+  // TASK COLOR
+  TASK_RED: '#D10263',
+  TASK_YELLOW: '#FFD506',
+  TASK_GREEN: '#1ED102'
+}

@@ -1,6 +1,6 @@
-import { Alert }      from 'react-native'
-import axios          from 'axios'
-import NetInfo        from "@react-native-community/netinfo"
+import { Alert } from 'react-native'
+import axios from 'axios'
+import NetInfo from "@react-native-community/netinfo"
 import { AUTH_TYPES } from '../types'
 
 authRequest = () => ({
@@ -21,7 +21,7 @@ export const login = (credentail, onLoginSuccess) => {
   return async (dispatch, getState) => {
     try {
       const { isConnected } = await NetInfo.fetch()
-      const endpoint        = 'endpoint'
+      const endpoint = 'endpoint'
 
       if (!isConnected) {
         Alert.alert("No internet connection", "It seems you don't have internet connection.")
@@ -43,7 +43,7 @@ export const register = (params, onRegisterSuccess) => {
   return async (dispatch, getState) => {
     try {
       const { isConnected } = await NetInfo.fetch()
-      const endpoint        = ''
+      const endpoint = ''
 
       if (!isConnected) {
         Alert.alert("No internet connection", "It seems you don't have internet connection.")
@@ -65,7 +65,7 @@ export const logout = onLogoutSuccess => {
   return async (dispatch, getState) => {
     try {
       const { isConnected } = await NetInfo.fetch()
-      const endpoint        = ''
+      const endpoint = ''
 
       if (!isConnected) {
         Alert.alert("No internet connection", "It seems you don't have internet connection.")
